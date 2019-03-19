@@ -1,9 +1,9 @@
 (function executeRule(current, previous /*null when async*/) {
 
     //Update the values of the following attributes to your specific API base URL, login credentials, and tenant/domain names
-	var NetBrainPrefix = 'https://104.207.208.105/ServicesAPI/API/';
-    var Username = 'atin.tandon';
-    var Password = 'Netbrain10';
+	var NetBrainPrefix = 'https://XXX/ServicesAPI/API/';
+    var Username = 'XXX';
+    var Password = 'XXX';
     var TenantName = 'Initial Tenant';
     var DomainName = 'S&S integration lab';
     var deviceName = 'DMHQ-3750-1';

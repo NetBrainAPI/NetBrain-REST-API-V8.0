@@ -41,7 +41,7 @@ b. Specified runbook output is saved in map
 2) Script is executed when the trigger is executed – this is implemented in ServiceNow using "Business Rules". Within a business rule, "Advanced" option is checked to enable script<br>
 3) The script performs the following logical steps:<br>
 a. Performs authentication with NetBrain server<br>
-b. Gather device display name from incident's "cmdb_ci" table<br>
+b. Gather source device detail information(hostname, gateway) and destination device hostname from ServiceNow custom field.<br>
 c. Trigger NetBrain Stub to generate the map<br>
 d. Receives the map URL as a response to the API call
 4) NetBrain credentials are placed in the script
@@ -85,67 +85,12 @@ Same with reference in Github, we define all global variables at beginning then 
 (function executeRule(current, previous /*null when async*/) {
 
     //Update the values of the following attributes to your specific API base URL, login credentials, and tenant/domain names
-	var NetBrainPrefix = 'https://104.207.208.105/ServicesAPI/API/';
-    var Username = 'netbrain';
-    var Password = 'netbrain';
+    var NetBrainPrefix = 'http://unity.netbraintech.com/ServicesAPI/API/';
+    var Username = 'admin';
+    var Password = 'admin';
     var TenantName = 'Initial Tenant';
-    var DomainName = 'LAB';
-    var StubName = 'TriggerPathMap_Test';
-    var triggered_by = 'netbrain';
-    var device = 'DMSM-3640-1';
-    var map_create_mode = 3;
-
-    //Get token
-    token = requestloginApiToken(Username, Password);
-    
-    //Get tenant ID
-    tenantId = getTenantID(TenantName, token);
-    
-    //Get domain ID
-    domainId = getDomainID(DomainName, tenantId, token);
-    current.work_notes = "Tenant ID: " + tenantId + "\n" + "Domain ID: " + domainId;
-    current.update();
-
-    //Get path source IP from ServiceNow "u_source_ip_new" field
-    source = current.getDisplayValue('u_source_ip_new');
-    
-    //Get path destination IP from ServiceNow "u_destination_ip_new" field
-    destination = current.getDisplayValue('u_destination_ip_new');
-    current.work_notes = "source: " + source + "\n" + "destination: " + destination;
-
-
-    var data = {
-            domain_setting: {
-                tenant_id: tenant_id,
-                domain_id: domain_id
-            },
-            basic_setting: {
-                triggered_by: triggered_by,
-                user: Username,
-                device: device,
-                stub_name: StubName
-            },
-            map_setting: {
-                map_create_mode: map_create_mode,
-                map_path_para: {
-                    source: source,
-                    destination: destination
-                }
-            }
-        };
-
-	current.update();
-    
-    //Update the 5th parameter to the specific API Stub you defined in NetBrain. Get NetBrain path map URL from NetBrain Trigger API response
-    netbrainurl = drawPathTrigger(token, data);
-	
-    //Set NetBrain path map URL to "u_netbrainmapurl" field
-    if (netbrainurl.length > 0) {
-		gs.log('NetBrain Map Url ' + netbrainurl);
-        setRrdValue('incident', 'sys_id', current.getValue('sys_id'), 'u_netbrainmapurl', netbrainurl);       
-    }
-    logoutApiToken(apiTokenStr);
-
+    var DomainName = 'Experience Lab';
+ 
     //Get login token
     function requestloginApiToken(usr, pwd, authId) {
         var authdata = {
@@ -157,7 +102,7 @@ Same with reference in Github, we define all global variables at beginning then 
         r.setEndpoint(NetBrainPrefix + 'V1/Session');
         r.setHttpMethod('POST');
         r.setRequestBody(JSON.stringify(authdata));
-        r.setHttpTimeout(10000);
+        r.setHttpTimeout(100000);
         try {
             var response = r.execute();
             var responseBody = response.getBody();
@@ -168,14 +113,14 @@ Same with reference in Github, we define all global variables at beginning then 
             return "ERROR : requestloginApiToken";
         }
     }
-
+ 
     //Get working tenant ID from the user accessible tenant list
     function getTenantID(tenantName, tokenStr) {
         var r = new sn_ws.RESTMessageV2();
         r.setEndpoint(NetBrainPrefix + 'V1/CMDB/Tenants');
         r.setHttpMethod('GET');
         r.setRequestHeader('Token', tokenStr);
-        r.setHttpTimeout(10000);
+        r.setHttpTimeout(100000);
         try {
             var response = r.execute();
             var responseBody = response.getBody();
@@ -191,7 +136,7 @@ Same with reference in Github, we define all global variables at beginning then 
             return "ERROR: getTenantID";
         }
     }
-
+ 
     //Get working domain ID from the user accessible domain list of a specific accessible tenant
     function getDomainID(domainName, tenantId, tokenStr) {
         var r = new sn_ws.RESTMessageV2();
@@ -199,7 +144,7 @@ Same with reference in Github, we define all global variables at beginning then 
         r.setHttpMethod('GET');
         r.setRequestHeader('Token', tokenStr);
         r.setRequestHeader('tenantId', tenantId);
-        r.setHttpTimeout(10000);
+        r.setHttpTimeout(100000);
         try {
             var response = r.execute();
             var responseBody = response.getBody();
@@ -215,7 +160,7 @@ Same with reference in Github, we define all global variables at beginning then 
             return "ERROR: getDomainID";
         }
     }
-
+ 
     //Logout token
     function logoutApiToken(tokenStr) {
         var r = new sn_ws.RESTMessageV2();
@@ -233,12 +178,35 @@ Same with reference in Github, we define all global variables at beginning then 
             return "ERROR : logoutApiToken";
         }
     }
-	
+    
     //Trigger NetBrain to draw path map
-	function drawPathTrigger(serviceLoginToken, data) {
+    function drawPathTrigger(serviceLoginToken, tenant_id, domain_id, nbuser, StubName, source, sourceGateway, destination, destinationPort, direction, protocol, pathAnalysisSetName) {
         var r = new sn_ws.RESTMessageV2();
         r.setEndpoint(NetBrainPrefix + 'V1/Triggers/Run');
         r.setHttpMethod('POST');
+        var data = {
+            domain_setting: {
+                tenant_id: tenant_id,
+                domain_id: domain_id
+            },
+            basic_setting: {
+                triggered_by: 'haoran',
+                user: nbuser,
+                stub_name: StubName
+            },
+            map_setting: {
+                map_create_mode: 3,
+                map_path_para: {
+                    source: source,
+                    source_gateway: sourceGateway,
+                    destination: destination,
+                    destination_port: destinationPort,
+                    direction: direction,
+                    protocol_name: protocol,
+                    path_analysis_set_name: pathAnalysisSetName
+                }
+            }
+        };
         r.setRequestHeader('Token', serviceLoginToken);
         r.setRequestHeader('Content-Type', 'application/json');
         r.setRequestBody(JSON.stringify(data));
@@ -246,7 +214,7 @@ Same with reference in Github, we define all global variables at beginning then 
         try {
             var response = r.execute();
             var responseBody = response.getBody();
-			var responseStatusCode = response.getStatusCode();
+            var responseStatusCode = response.getStatusCode();
             var obj = new JSON.parse(responseBody);
             return obj.mapUrl;
         } catch (ex) {
@@ -254,9 +222,9 @@ Same with reference in Github, we define all global variables at beginning then 
             gs.log('Netbrain drawPathTrigger()');
         }
     }
-	
+    
     //Set value to ServiceNow field
-	function setRrdValue(grName, srcPrName, srcPrV, dstPrName, dstPrValue) {
+    function setRrdValue(grName, srcPrName, srcPrV, dstPrName, dstPrValue) {
         var gr = new GlideRecord(grName);
         gr.addQuery(srcPrName, srcPrV);
         gr.query();
@@ -265,7 +233,38 @@ Same with reference in Github, we define all global variables at beginning then 
             gr.update();
         }
     }
-
+ 
+    //Get token
+    token = requestloginApiToken(Username, Password);
+    current.work_notes = "Token: " + token;
+    current.update();
+    //Get tenant ID
+    tenantId = getTenantID(TenantName, token);
+    //Get domain ID
+    domainId = getDomainID(DomainName, tenantId, token);
+    current.work_notes = "Tenant ID: " + tenantId + "\n" + "Domain ID: " + domainId;
+    current.update();
+    //Get path source IP from ServiceNow "u_source_ip_new" field
+    source = current.getDisplayValue('u_source_ip_new');
+    //Get path destination IP from ServiceNow "u_destination_ip_new" field
+    destination = current.getDisplayValue('u_destination_ip_new');
+    sourceGateway = current.getDisplayValue('u_source_gateway');
+    destinationPort = current.getDisplayValue('u_destination_port');
+    direction = current.getDisplayValue('u_path_direction');
+    pathAnalysisSetName = current.getDisplayValue('u_path_analysis_set');
+    protocol = current.getDisplayValue('u_protocol');
+    current.work_notes = "source: " + source + "\n" + "destination: " + destination;
+    current.work_notes = "sourceGateway: " + sourceGateway;
+    current.update();
+    //Update the 5th parameter to the specific API Stub you defined in NetBrain. Get NetBrain path map URL from NetBrain Trigger API response
+    netbrainurl = drawPathTrigger(token, tenantId, domainId, Username, 'TestStub', source, sourceGateway, destination, destinationPort, direction, protocol, pathAnalysisSetName);
+    //Set NetBrain path map URL to "u_netbrainmapurl" field
+    if (netbrainurl.length > 0) {
+        gs.log('NetBrain Map Url ' + netbrainurl);
+        setRrdValue('incident', 'sys_id', current.getValue('sys_id'), 'u_netbrainmapurl', netbrainurl);       
+    }
+    logoutApiToken(apiTokenStr);
+    
 })(current, previous);
 
 

@@ -110,7 +110,7 @@ Call this API to trigger a map built by Netbrain from third part software.
 | runbook_setting.ping_settings | list | Ping Node settings information by order |
 | runbook_setting.ping_settings[].source_type | int | Source Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
 | runbook_setting.ping_settings[].source | string | source device name |
-| runbook_setting.ping_settings[].source_interface | string | sourece interface name |
+| runbook_setting.ping_settings[].source_interface | string | source interface name |
 | runbook_setting.ping_settings[].destination_type | int | destination Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
 | runbook_setting.ping_settings[].destination | string | destination device name |
 | runbook_setting.ping_settings[].destination_interface | string | destination interface name |

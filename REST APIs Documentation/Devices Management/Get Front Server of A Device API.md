@@ -1,16 +1,16 @@
 
 # Device API Design
 
-## ***GET*** /V1/CMDB/Devices/Attributes/{hostname}/FrontServer
+## ***GET*** /V1/CMDB/Devices/decive/FrontServer{?hostname}
 Call this API to set a value for the specified attriute of a device.
 
 * ## Detail Information
 
 > **Title** : Get Front Server of a device API<br>
 
-> **Version** : 01/28/2019.
+> **Version** : 04/05/2019.
 
-> **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Devices/{hostname}/FrontServer
+> **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Devices/device/FrontServer
 
 > **Authentication** : 
 
@@ -23,7 +23,7 @@ Call this API to set a value for the specified attriute of a device.
 
 >No request body.
 
-* ## Path Parameters(****required***)
+* ## Query Parameters(****required***)
 
 |**Name**|**Type**|**Description**|
 |------|------|------|
@@ -80,15 +80,19 @@ import json
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Set the request inputs
-token = "855b2da0-306b-4c29-b37f-be09e33e2d02"
+token = "6b56c382-5577-49fa-a9a4-444e80831562"
 nb_url = "http://192.168.28.79"
 hostname = "R10"
 
+data = {
+    "hostname":hostname
+}
+
 headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 headers["Token"]=token
-full_url= nb_url + "/ServicesAPI/API/V1/CMDB/Devices/" + str(hostname) + "/FrontServer"
+full_url= nb_url + "/ServicesAPI/API/V1/CMDB/Devices/device/FrontServer"
 try:
-    response = requests.get(full_url, headers=headers, verify=False)
+    response = requests.get(full_url, headers=headers, params = data, verify=False)
     if response.status_code == 200:
         result = response.json()
         print (result)
@@ -99,7 +103,7 @@ except Exception as e:
     print (str(e))   
 ```
 
-    Get front server failed! - {"statusCode":793404,"statusDescription":"No resource"}
+    {'alias': 'NetBrainServer', 'ipOrHostname': '192.168.28.79', 'statusCode': 790200, 'statusDescription': 'Success.'}
     
 
 * # cURL Code from Postman
@@ -107,8 +111,8 @@ except Exception as e:
 
 ```python
 curl -X GET \
-  http://192.168.28.79/ServicesAPI/API/V1/CMDB/Devices/AS20002/FrontServer \
-  -H 'Postman-Token: c873eb5b-7924-49ed-8609-ea5e215b4e52' \
+  'http://192.168.28.79/ServicesAPI/API/V1/CMDB/Devices/device/FrontServer?hostname=R10' \
+  -H 'Postman-Token: 4a9bba1f-85ff-4f36-9eee-a1abd1cceec3' \
   -H 'cache-control: no-cache' \
-  -H 'token: 13c7ed6e-781d-4b22-83e7-b1722de4e31d'
+  -H 'token: 6b56c382-5577-49fa-a9a4-444e80831562'
 ```

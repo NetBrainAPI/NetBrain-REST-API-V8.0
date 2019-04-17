@@ -153,7 +153,8 @@ A) Click the domain name on right up corner of customer NetBrain desktop, click 
 B) After redirection into **Domain Management** page, click on **Operations** and select **API Server Manager**.<br>
 C) Find the plugin customer just created, to the right end of current row click the smail arrow and selest **Edit**.<br>
 D) Fill in all fields in the new open dailog, click on **Manage Devices**.<br>
-**Note:** customer must input the Splunk account information correctly(username, password and endpoint).<br>
+> **Note:** customer must input the Splunk account information correctly(username, password and endpoint).<br>
+
 E) In the new open dialog, choose devices to connect to Splunk plugin, click **OK**.<br>
 F) Then after jump to the previous dialog, click on the **Test** button. <br>
 G) Check the test result.<br>

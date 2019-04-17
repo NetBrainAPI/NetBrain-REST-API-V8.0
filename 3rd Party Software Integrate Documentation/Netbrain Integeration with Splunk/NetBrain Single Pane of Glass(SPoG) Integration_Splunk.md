@@ -22,6 +22,8 @@ First, customer needs to know how to use Splunk search, click [here](https://doc
 After customer confirm that the syntax of searchquery is correct and can retreive the expecting data from Splunk console then we can forward to the next step **Create API Plugin in NetBrain for Splunk**.
 
 ### Defining an API Plugin
+>(Please ignore this section if customer only use a build-in plugin)<br>
+
 API Plugin is a component to define a function template for the API Parser and API Server to work with a third-party system.<br>
 
 To define a new API plugin, complete the following steps.<br>

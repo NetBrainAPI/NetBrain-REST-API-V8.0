@@ -18,15 +18,15 @@ example to explain how ServiceNow SPoG is implemented in NetBrain system.
 ## Integrate with Splunk
 In this case, we mainly focus on  calling Splunk REST API and set Splunk searchquery as an input to retreive corresponding data from Splunk, then put the data into NetBrain system with correlation, analysis or troubleshooting. 
 
-First, customer needs to know how to use Splunk search click [here](https://docs.splunk.com/Documentation/Splunk/7.2.5/Search/GetstartedwithSearch)
-After customer confirm that the syntax of searchquery is correct and can retreive the expecting data from Splunk console then we can forward to the next step Create API Plugin in NetBrain for Splunk.
+First, customer needs to know how to use Splunk search, click [here](https://docs.splunk.com/Documentation/Splunk/7.2.5/Search/GetstartedwithSearch).
+After customer confirm that the syntax of searchquery is correct and can retreive the expecting data from Splunk console then we can forward to the next step **Create API Plugin in NetBrain for Splunk**.
 
 ### Defining an API Plugin
 API Plugin is a component to define a function template for the API Parser and API Server to work with a third-party system.<br>
 
 To define a new API plugin, complete the following steps.<br>
 
-**Tip:** The system provides a built-in ServiceNow API Plugin and you can refer to it to write your own ones in the API Plugin Manager.
+**Tip:** The system provides a built-in Splunk API Plugin and you can refer to it to write your own ones in the API Plugin Manager.
 
 At the beginning, customer needs to know how to creating searches using the Splunk REST API, click [here](https://docs.splunk.com/Documentation/Splunk/7.2.5/RESTTUT/RESTsearches). 
 

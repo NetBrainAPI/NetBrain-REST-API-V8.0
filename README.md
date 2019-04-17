@@ -60,6 +60,7 @@ Netbrain provide all available REST APIs in this repository. We offer two sectio
 ### [Map Management](https://github.com/NetBrainAPI/North-Bound-API/tree/master/REST%20APIs%20Documentation/Map%20Management) 
 1) [Delete Map API](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Map%20Management/Delete%20Map%20API.md)<br>
 2) [Export Map API](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Map%20Management/Export%20Map%20API.md)
+3) [Get Files List API](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Get%20file%20list%20API.md)
 
 ### [Module Management](https://github.com/NetBrainAPI/North-Bound-API/tree/master/REST%20APIs%20Documentation/Module%20Management)  
 1) [Applicable Module Attributes Table](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Module%20Management/Applicable%20Module%20Attributes%20Table.md)<br>
@@ -135,13 +136,3 @@ Netbrain provide all available REST APIs in this repository. We offer two sectio
 4) [Get Detail Usage Report of Users API](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/User%20Management/Get%20Detail%20Usage%20Report%20of%20Users%20API.md)<br>
 5) [Update User API](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/User%20Management/Update%20User%20API.md)<br>
 6) [Get Users API](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/User%20Management/Get%20Users%20API.md)
-
-[Get Files List API](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Get%20file%20list%20API.md)
-
-
-```python
-
-```
-
-test by marko
-

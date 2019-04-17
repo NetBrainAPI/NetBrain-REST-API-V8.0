@@ -97,7 +97,7 @@ rebuildSite = True
 body = {"rebuildSite" : rebuildSite}
 
 try:
-    response = requests.post(full_url, data = json.dumps(body), headers = headers, verify = False)
+    response = requests.put(full_url, data = json.dumps(body), headers = headers, verify = False)
     if response.status_code == 200:
         result = response.json()
         print (result)

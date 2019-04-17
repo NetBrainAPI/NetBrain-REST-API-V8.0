@@ -28,7 +28,7 @@ Call this API to get the connected layer 2 switch port whihc specified by manage
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-|ip* | string  | The IP address of a device interface. |
+|ip* | string  | The IP address of a end system. |
 
 ## Headers
 
@@ -85,7 +85,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 token = "3d0f475d-dbae-4c44-9080-7b08ded7d35b"
 nb_url = "http://192.168.28.79"
  
-ip = "" # In our lab, all devices interfaces don't have Ip attribute.
+ip = "10.8.1.25" 
 
 full_url = nb_url + "/ServicesAPI/API/V1/CMDB/Topology/Devices/"+str(ip)+"/ConnectedSwitchPort"
 headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
@@ -103,7 +103,7 @@ except Exception as e:
     print (str(e)) 
 ```
 
-    Get Connected Switch Port failed! - {"statusCode":793404,"statusDescription":"No resource"}
+    {'hostname': 'US-BOS-SW3', 'interface': 'Ethernet0', 'statusCode': 790200, 'statusDescription': 'Success.'}
     
 
 # cURL Code from Postman:

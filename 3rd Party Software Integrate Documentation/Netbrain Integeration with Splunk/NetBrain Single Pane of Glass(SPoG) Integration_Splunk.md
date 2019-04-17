@@ -55,6 +55,7 @@ G) Check the test result.<br>
 
 If the test result is **failed** then customer needs to check the NetBrain frontserver apilog file to confirm what kind of error has been occured.
 
+### Build NetBrain API parser
 After test the plugin successfully, next step is build a parser to input the variable and retreive data from Splunk.
 To create a NetBrain parser click [here](https://www.netbraintech.com/ftp/IE71/OnlineHelp/creating-an-api-parser.htm).
 

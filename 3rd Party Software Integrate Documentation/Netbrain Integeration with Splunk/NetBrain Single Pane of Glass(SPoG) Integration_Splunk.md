@@ -79,7 +79,7 @@ def BuildParameters(context, device_name, params):
         'post_searchID_uri' : '/services/search/jobs',
         'get_searchStatus_uri' : '/services/search/jobs/%s/',
         'get_data_uri' : '/services/search/jobs/%s/results?output_mode=json&count=0',
-        'searchquery' : 'customer need to input their own search query at here'
+        'searchquery' : 'customers need to input their own search query at here'
                        #example: "sourcetype=iis earliest=-5m@m latest=now() | timechart span=5m count as Number by c_ip"
     }
     return (True, rtn_params)

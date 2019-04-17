@@ -33,7 +33,7 @@ At the beginning, customer needs to know how to creating searches using the Splu
 **Step:**<br>
 1.[Log into System Management page.](https://www.netbraintech.com/docs/ie71/help/logging-in-system-admin-page.htm)<br>
 2.Select the **API Plugin Manager** tab and click **Add**. <br>
-<img src="images\add_plugin_manager" /><br>
+<img src="images\add_plugin_manager.png" /><br>
 3.Enter a name in the Plugin Name field, such as ServiceNow Incidents.<br>
 4.Enter a description of the API plugin in the Description field.<br>
 5.Enter the API script in the Script field. <br>
@@ -148,7 +148,7 @@ def _test(param):
 ```
 
 Customer has to copy the whole python script into NetBrain plugin. After customer save the plugin, next step is navigate to NetBrain **Domain Management** then **API Server Manager** to set the API plugin to corresponding devices. Steps showing below:
-<img src="images\api_manage_step" /><br>
+<img src="images\api_manage_step.png" /><br>
 If the test result is **failed** then customer needs to check the NetBrain frontserver apilog file to confirm what kind of error has been occured.
 
 After test the plugin successfully, next step is build a parser to input the variable and retreive data from Splunk.

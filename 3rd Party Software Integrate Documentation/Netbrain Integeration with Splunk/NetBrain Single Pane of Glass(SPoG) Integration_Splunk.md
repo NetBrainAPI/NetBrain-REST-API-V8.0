@@ -40,6 +40,7 @@ At the beginning, customer needs to know how to creating searches using the Splu
 **Tip:** You can click Popup to prompt a larger script interface. Alternatively, you can click Import to import an existing python file directly.<br>
 6.Click Save to save the definition.
 
+### Management API Plugin
 Customer needs to navigate to NetBrain **Domain Management** then **API Server Manager** to set the API plugin to corresponding devices. Steps showing below:
 <img src="images\api_manage_step.png" /><br>
 A) Click the domain name on right up corner of customer NetBrain desktop, click on the **Manage Domain**.<br>

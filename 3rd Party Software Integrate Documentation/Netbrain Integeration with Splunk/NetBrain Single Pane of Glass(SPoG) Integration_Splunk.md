@@ -149,6 +149,15 @@ def _test(param):
 
 Customer has to copy the whole python script into NetBrain plugin. After customer save the plugin, next step is navigate to NetBrain **Domain Management** then **API Server Manager** to set the API plugin to corresponding devices. Steps showing below:
 <img src="images\api_manage_step.png" /><br>
+A) Click the domain name on right up corner of customer NetBrain desktop, click on the **Manage Domain**.<br>
+B) After redirection into **Domain Management** page, click on **Operations** and select **API Server Manager**.<br>
+C) Find the plugin customer just created, to the right end of current row click the smail arrow and selest **Edit**.<br>
+D) Fill in all fields in the new open dailog, click on **Manage Devices**.<br>
+**Note:** customer must input the Splunk account information correctly(username, password and endpoint).<br>
+E) In the new open dialog, choose devices to connect to Splunk plugin, click **OK**.<br>
+F) Then after jump to the previous dialog, click on the **Test** button. <br>
+G) Check the test result.<br>
+
 If the test result is **failed** then customer needs to check the NetBrain frontserver apilog file to confirm what kind of error has been occured.
 
 After test the plugin successfully, next step is build a parser to input the variable and retreive data from Splunk.

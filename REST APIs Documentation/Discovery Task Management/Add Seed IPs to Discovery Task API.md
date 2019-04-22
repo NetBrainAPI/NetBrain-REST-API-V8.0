@@ -160,7 +160,7 @@ except Exception as e:
 
 ```
 
-    IP Add Failed - {"statusCode":795005,"statusDescription":"Invalid token."}
+    { "statusCode": 790200, "statusDescription": "Success." }
     
 
  # cURL Code from Postman

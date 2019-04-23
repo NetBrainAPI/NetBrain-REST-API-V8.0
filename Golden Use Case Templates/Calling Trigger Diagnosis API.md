@@ -18,10 +18,10 @@ In this use case,  we will totally focus on trigger diagnosis API to trigger mul
 > Note: If users try to use this code. please remember to change the "nb_url" to users' own working url.
 
 ***1b. login API.***<br>
->Same with use case 2, we calling the login API with "username" and "password" as inputs in the first step. As response we can get the authentication token as one fixed input in following APIs calling. If users get errors when calling this API please check the API documentation on [Github_login](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/STANDARD_formate_TEST1_LOGIN_API.ipynb).
+>Same with use case 2, we calling the login API with "username" and "password" as inputs in the first step. As response we can get the authentication token as one fixed input in following APIs calling. If users get errors when calling this API please check the API documentation on [Github_login](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Authentication%20and%20Authorization/Login%20API.md).
 
 ***1c. specify_a_working_domain API.***<br>
->After we running this step successfully, we directly complete the full login processes which means we totally join in Netbrain System by calling APIs(because we have record our tenantId and domainId，if users don't know the ID of corresponding tenant and domain please fully follow step 1 to step 4 in use case 1). Next step, we will start to use Netbrain functions formally. If users want to get more details about this API or get errors when calling this API please check the API documentation on [Github_domain](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/STANDARD_formate_Specify_a_domain_to_work_on_API_Test1%20.ipynb).
+>After we running this step successfully, we directly complete the full login processes which means we totally join in Netbrain System by calling APIs(because we have record our tenantId and domainId，if users don't know the ID of corresponding tenant and domain please fully follow step 1 to step 4 in use case 1). Next step, we will start to use Netbrain functions formally. If users want to get more details about this API or get errors when calling this API please check the API documentation on [Github_domain](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Authentication%20and%20Authorization/Specify%20A%20Working%20Domain%20API.md).
 
 
 
@@ -112,7 +112,7 @@ API Response:     Working Domain Specified Successfully, with domainId: 850ff5e9
     
 
 ## Step 2: Calling Trigger Diagnosis API 
-After we finished all preparations, we are going to start to calling this API in step. One of the most significant characteristic of trigger diagnosis API is the gigantic input body (as a post function the body input is reasonable). There are more than 100 attributes in the entire body parameter. The body including 6 sub-sections, each section provide different input informations.See detail explanation in [Github_trigger_diagnosis](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Trigger_Path_Map_program/trigger_map_and_path_API.ipynb)<br>
+After we finished all preparations, we are going to start to calling this API in step. One of the most significant characteristic of trigger diagnosis API is the gigantic input body (as a post function the body input is reasonable). There are more than 100 attributes in the entire body parameter. The body including 6 sub-sections, each section provide different input informations.See detail explanation in [Github_trigger_diagnosis](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Trigger%20Diagnosis%20API/Trigger%20Diagnosis%20API.md)<br>
 
 >***Note:*** before calling this API, users must create a stub in Netbrain GUI system first: click desktop menu button -> System Automation Task Manager -> API Stub Manager -> Add Stub.
 
@@ -137,7 +137,7 @@ an error will occured : {'error': 'Failed to find the designated device SW40'}.<
 
 >Til now we have fully called trigger diagnosis API and got four different type of maps. Users can copy the "mapUrl" in API response and open it in any browsers to check the map detail directly. 
 
->If users want to get more details about this API or get errors when calling this API please check the API documentation on[Github_trigger_diagnosis](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Trigger_Path_Map_program/trigger_map_and_path_API.ipynb)
+>If users want to get more details about this API or get errors when calling this API please check the API documentation on[Github_trigger_diagnosis](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Trigger%20Diagnosis%20API/Trigger%20Diagnosis%20API.md)
 
 
 ```python
@@ -374,15 +374,15 @@ API Response:
 
 > 1) login API:<br>
 
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/STANDARD_formate_TEST1_LOGIN_API.ipynb
+>https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Authentication%20and%20Authorization/Login%20API.md
 
 > 2) specify_a_working_domain API: <br>
 
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/STANDARD_formate_Specify_a_domain_to_work_on_API_Test1%20.ipynb
+>https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Authentication%20and%20Authorization/Specify%20A%20Working%20Domain%20API.md
 
 > 3) trigger_diagnosis API:<br>
 
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Trigger_Path_Map_program/trigger_map_and_path_API.ipynb
+>https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Trigger%20Diagnosis%20API/Trigger%20Diagnosis%20API.md
 
 
 

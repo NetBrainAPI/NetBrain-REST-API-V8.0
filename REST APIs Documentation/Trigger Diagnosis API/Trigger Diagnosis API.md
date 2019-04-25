@@ -576,7 +576,7 @@ Input:
                     "stub_name": "stubTest1"
                 },
                 "map_setting": {
-                        "map_create_mode": 0,
+                        "map_create_mode": 1,
                         "map_device_sitemap_para": {
                         "device": "SW4",
                         "duplicate_map": False

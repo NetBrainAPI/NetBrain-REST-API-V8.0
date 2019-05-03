@@ -1,7 +1,7 @@
 
 # Interface API Design
 
-## ***GET*** /V1/CMDB/Interface/{?hostname}
+## ***GET*** /V1/CMDB/Interfaces/{?hostname}
 Call this API to get all interfaces of one device which specified by hostname.
 
 ## Detail Information

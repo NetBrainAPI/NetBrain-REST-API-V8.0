@@ -65,37 +65,42 @@ Call this API to get the value for a specified attribute of a device interface, 
 
 ```python
 {
-    "hostname": "R1",
-    "attributes": {
-        "Ethernet0/3": {
-            "name": "Ethernet0/3",
-            "ips": "",
-            "ipv6s": "",
-            "ipv6LinkLocalAddress": "",
-            "mibIndex": 4,
-            "bandwidth": 10000,
-            "speed": "",
-            "duplex": "halfDuplex",
-            "intfStatus": "up/up",
-            "macAddr": "aabb.cc00.0530",
-            "moduleSlot": "",
-            "moduleType": "",
-            "descr": "",
-            "routingProtocol": "",
-            "multicastMode": "",
-            "mplsVrf": "",
-            "inAclName": "",
-            "outAclName": "",
-            "mode": "",
-            "vlan": "",
-            "trunkNativeVlan": "",
-            "trunkEncapsulation": "",
-            "ipUnnumberedIp": "",
-            "ss": ""
+  "hostname": "CA-TOR-SW2",
+  "attributes": {
+    "Ethernet1/0": {
+      "name": "Ethernet1/0",
+      "ips": [
+        {
+          "ip": 168297218,
+          "ipLoc": "10.8.3.2/30",
+          "maskLen": 30
         }
-    },
-    "statusCode": 790200,
-    "statusDescription": "Success."
+      ],
+      "ipv6s": "",
+      "ipv6LinkLocalAddress": "",
+      "mibIndex": 5,
+      "bandwidth": 10000,
+      "speed": "auto",
+      "duplex": "a-full",
+      "intfStatus": "up/up",
+      "macAddr": "aabb.cc00.0101",
+      "moduleSlot": "",
+      "moduleType": "",
+      "descr": "",
+      "routingProtocol": "OSPF 1 AREA 51",
+      "multicastMode": "pim sparse-mode",
+      "mplsVrf": "",
+      "inAclName": "",
+      "outAclName": "",
+      "mode": "",
+      "vlan": "",
+      "trunkNativeVlan": "",
+      "trunkEncapsulation": "",
+      "ipUnnumberedIp": ""
+    }
+  },
+  "statusCode": 790200,
+  "statusDescription": "Success."
 }
 ```
 
@@ -118,8 +123,8 @@ headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 headers["Token"] = token
 full_url = nb_url + "/ServicesAPI/API/V1/CMDB/Interfaces/Attributes"
 
-hostname = "R1"
-interfaceName = ""
+hostname = "CA-TOR-SW2"
+interfaceName = "Ethernet1/0"
 attributeName = ""
 
 data = {
@@ -140,7 +145,44 @@ except Exception as e:
     print (str(e))  
 ```
 
-    {'hostname': 'R1', 'attributes': {'Ethernet0/0': {'name': 'Ethernet0/0', 'ips': '', 'ipv6s': '', 'ipv6LinkLocalAddress': '', 'mibIndex': 1, 'bandwidth': 10000, 'speed': '', 'duplex': 'halfDuplex', 'intfStatus': 'up/up', 'macAddr': 'aabb.cc00.0500', 'moduleSlot': '', 'moduleType': '', 'descr': '', 'routingProtocol': '', 'multicastMode': '', 'mplsVrf': '', 'inAclName': '', 'outAclName': '', 'mode': '', 'vlan': '', 'trunkNativeVlan': '', 'trunkEncapsulation': '', 'ipUnnumberedIp': '', 'ss': ''}, 'Ethernet0/1': {'name': 'Ethernet0/1', 'ips': [{'ip': 2064253189, 'ipLoc': '123.10.1.5/30', 'maskLen': 30}], 'ipv6s': '', 'ipv6LinkLocalAddress': '', 'mibIndex': 8, 'bandwidth': 10000, 'speed': '', 'duplex': 'halfDuplex', 'intfStatus': 'up/up', 'macAddr': 'aabb.cc00.0510', 'moduleSlot': '', 'moduleType': '', 'descr': '', 'routingProtocol': 'OSPF 12345 AREA 0', 'multicastMode': '', 'mplsVrf': '', 'inAclName': '', 'outAclName': '', 'mode': '', 'vlan': '', 'trunkNativeVlan': '', 'trunkEncapsulation': '', 'ipUnnumberedIp': '', 'ss': ''}, 'Ethernet0/2': {'name': 'Ethernet0/2', 'ips': [{'ip': 2064253186, 'ipLoc': '123.10.1.2/30', 'maskLen': 30}], 'ipv6s': '', 'ipv6LinkLocalAddress': '', 'mibIndex': 9, 'bandwidth': 10000, 'speed': '', 'duplex': 'halfDuplex', 'intfStatus': 'up/up', 'macAddr': 'aabb.cc00.0520', 'moduleSlot': '', 'moduleType': '', 'descr': '', 'routingProtocol': 'OSPF 12345 AREA 0', 'multicastMode': '', 'mplsVrf': '', 'inAclName': '', 'outAclName': '', 'mode': '', 'vlan': '', 'trunkNativeVlan': '', 'trunkEncapsulation': '', 'ipUnnumberedIp': '', 'ss': ''}, 'Ethernet0/3': {'name': 'Ethernet0/3', 'ips': '', 'ipv6s': '', 'ipv6LinkLocalAddress': '', 'mibIndex': 4, 'bandwidth': 10000, 'speed': '', 'duplex': 'halfDuplex', 'intfStatus': 'up/up', 'macAddr': 'aabb.cc00.0530', 'moduleSlot': '', 'moduleType': '', 'descr': '', 'routingProtocol': '', 'multicastMode': '', 'mplsVrf': '', 'inAclName': '', 'outAclName': '', 'mode': '', 'vlan': '', 'trunkNativeVlan': '', 'trunkEncapsulation': '', 'ipUnnumberedIp': '', 'ss': ''}, 'Loopback0': {'name': 'Loopback0', 'ips': [{'ip': 2063663361, 'ipLoc': '123.1.1.1/32', 'maskLen': 32}], 'ipv6s': '', 'ipv6LinkLocalAddress': '', 'mibIndex': 7, 'bandwidth': 8000000, 'speed': '', 'duplex': '', 'intfStatus': 'up/up', 'macAddr': '', 'moduleSlot': '', 'moduleType': '', 'descr': '', 'routingProtocol': 'OSPF 12345 AREA 0', 'multicastMode': '', 'mplsVrf': '', 'inAclName': '', 'outAclName': '', 'mode': '', 'vlan': '', 'trunkNativeVlan': '', 'trunkEncapsulation': '', 'ipUnnumberedIp': '', 'ss': ''}}, 'statusCode': 790200, 'statusDescription': 'Success.'}
+    {
+      "hostname": "CA-TOR-SW2",
+      "attributes": {
+        "Ethernet1/0": {
+          "name": "Ethernet1/0",
+          "ips": [
+            {
+              "ip": 168297218,
+              "ipLoc": "10.8.3.2/30",
+              "maskLen": 30
+            }
+          ],
+          "ipv6s": "",
+          "ipv6LinkLocalAddress": "",
+          "mibIndex": 5,
+          "bandwidth": 10000,
+          "speed": "auto",
+          "duplex": "a-full",
+          "intfStatus": "up/up",
+          "macAddr": "aabb.cc00.0101",
+          "moduleSlot": "",
+          "moduleType": "",
+          "descr": "",
+          "routingProtocol": "OSPF 1 AREA 51",
+          "multicastMode": "pim sparse-mode",
+          "mplsVrf": "",
+          "inAclName": "",
+          "outAclName": "",
+          "mode": "",
+          "vlan": "",
+          "trunkNativeVlan": "",
+          "trunkEncapsulation": "",
+          "ipUnnumberedIp": ""
+        }
+      },
+      "statusCode": 790200,
+      "statusDescription": "Success."
+    }
     
 
 # cURL Code from Postman

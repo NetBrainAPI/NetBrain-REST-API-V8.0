@@ -34,7 +34,7 @@ If user set "IP = null" or " IP = "" " but provide the input values of "beginInd
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-| hostname* | string  | The name of a device. |
+| Ip* | string  | The ip address of current device. |
 | beginIndex* | int  | Begin index of data, API will return OneIP Table items start from "beginIndex". |
 | count* | int  | Count number of returned data, API will return OneIP Table items, the total number of items is the value of "count". Maximum "count" value is 1000. So API will only return 1000 itmes even users set the input value of "count" greater than 1000. If the total number of items which start from "beginIndex" to the end of table are less than "count" value, API will return the rest of items. |
 

@@ -33,7 +33,7 @@ Call this API to calculate the path from endpoint A (source) to endpoint B (dest
 |destPort* | integer  | Specify the destination protocol port If TCP/UDP is selected, such as 23 for telnet. This parameter can be null.  |
 |pathAnalysisSet* | integer  | Specify the path type to calculate:<br>▪ 1 - L3 Path<br>▪ 2 - L2 Path<br>▪ 3 - L3 Active Path |
 |protocol* | integer  | Specify the application protocol. see list_of_ip_protocol_numbers, such as 4 for IPv4.  |
-|isLive | bool  | ▪ false - Use data From current Baseline<br>▪ true - Use data via live access |
+|isLive | integer  | ▪ 0 - Use data From current Baseline<br>▪ 1 - Use data via live access |
 
 ## Parameters(****required***)
 

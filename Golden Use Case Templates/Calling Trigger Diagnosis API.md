@@ -1,6 +1,6 @@
 
 # Retrive multiple dynamic map by calling trigger diagnosis API
-In this use case,  we will totally focus on trigger diagnosis API to trigger multiple dynamic map as diagnosis referances. At the beginning, we must clarify that the trigger diagnosis API is one of the most important API in Netbrain's API library. Obviously it can trigger few dynamic maps from Netbrain to help engineers diagnose the real time issuses of network, actually the most significant value of this API is that it is the bridge for 3rd party data integration with Netbrain. Thus, if users eager to intergration with Netbrain's function and data from other software, this API is the only and the easist way so far. 
+In this use case,  we will totally focus on trigger diagnosis API to trigger multiple dynamic map as diagnosis referances. At the beginning, we must clarify that the trigger diagnosis API is one of the most important API in Netbrain's API library. Obviously it can trigger a few dynamic maps from Netbrain to help engineers diagnose the real time issuses of network, actually the most significant value of this API is that it is the bridge for 3rd party data integration with Netbrain. Thus, if users eager to intergration with NetBrain's function and data from other software, this API is the only and the easist way so far. 
 
 **[Step 1: Use case preparation](Step-1:-Use-case-preparation)**
 >> 1a. import all useful modules and create global variables<br>

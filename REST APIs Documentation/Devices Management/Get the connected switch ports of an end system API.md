@@ -80,7 +80,7 @@ import json
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Set the request inputs
-token = "ba6b63c6-5703-4549-9145-baefc22183de"
+token = "ba6b63c6-5703-4549-9145-XXXXXXXXXXXX"
 nb_url = "http://unity.netbraintech.com"
 ip = "10.8.3.130"
 

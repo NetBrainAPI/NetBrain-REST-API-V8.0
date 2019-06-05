@@ -31,7 +31,7 @@ Use this API to get the connected layer 2 switch ports of an end system.
 
 > **Data Format Headers**
 
-> |**Name**|**Type**|**Description**|
+ |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
 | Content-Type | string  | support "application/json" |
@@ -39,14 +39,14 @@ Use this API to get the connected layer 2 switch ports of an end system.
 
 > **Authorization Headers**
 
-> |**Name**|**Type**|**Description**|
+|**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
 | token | string  | Authentication token, get from login API. |
 
 ## Response
 
-> |**Name**|**Type**|**Description**|
+|**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
 |hostname| string | The hostname of the device that the end system connects to. |

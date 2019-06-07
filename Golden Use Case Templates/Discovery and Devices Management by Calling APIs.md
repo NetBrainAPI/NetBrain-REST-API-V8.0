@@ -30,10 +30,10 @@ In this use case, we totally concern 11 APIs, as shown below:
 > Note: If users try to use this code. please remember to change the "nb_url" to users' own working url.
 
 ***1b. login API.***<br>
->Same with use case 2, we calling the login API with "username" and "password" as inputs in the first step. As response we can get the authentication token as one fixed input in following APIs calling. If users get errors when calling this API please check the API documentation on [Github_login](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/STANDARD_formate_TEST1_LOGIN_API.ipynb).
+>Same with use case 2, we calling the login API with "username" and "password" as inputs in the first step. As response we can get the authentication token as one fixed input in following APIs calling. If users get errors when calling this API please check the API documentation on [Github_login](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Authentication%20and%20Authorization/Login%20API.md).
 
 ***1b. specify_a_working_domain API.***<br>
->After we running this step successfully, we directly complete the full login processes which means we totally join in Netbrain System by calling APIs(because we have record our tenantId and domainId，if users don't know the ID of corresponding tenant and domain please fully follow step 1 to step 4 in use case 1). Next step, we will start to use Netbrain functions formally. If users want to get more details about this API or get errors when calling this API please check the API documentation on [Github_domain](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/STANDARD_formate_Specify_a_domain_to_work_on_API_Test1%20.ipynb).
+>After we running this step successfully, we directly complete the full login processes which means we totally join in Netbrain System by calling APIs(because we have record our tenantId and domainId，if users don't know the ID of corresponding tenant and domain please fully follow step 1 to step 4 in use case 1). Next step, we will start to use Netbrain functions formally. If users want to get more details about this API or get errors when calling this API please check the API documentation on [Github_domain](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Authentication%20and%20Authorization/Specify%20A%20Working%20Domain%20API.md).
 
 
 
@@ -127,10 +127,10 @@ API Response:     Working Domain Specified Successfully, with domainId: 850ff5e9
 During this step, we need to choose or create one discovery task for following operatings and if it is an exist task, the status also need to be checked.
 
 ***2a. Calling get all discovery tasks API***
-> Call this API to get all discovery tasks from current domain. And to specify the taskId of the task which we going to use. If there are no discovery tasks in the system, add a new discovery task from the Domain Management page. In the discovery task, select Once on the Frequency tab and Discover the following IPs on the Discovery Seed tab. (more details: [Github_get_all_discovery_task](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_All_Discovery_Tasks_API_Test.ipynb)).
+> Call this API to get all discovery tasks from current domain. And to specify the taskId of the task which we going to use. If there are no discovery tasks in the system, add a new discovery task from the Domain Management page. In the discovery task, select Once on the Frequency tab and Discover the following IPs on the Discovery Seed tab. (more details: [Github_get_all_discovery_task](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Get%20All%20Discovery%20Tasks%20API.md)).
 
 ***2b. Calling get discovery task status API***
-> Call this API to get the status of the discovery task which identified by task ID. The reason why we calling this API at here is to confirm the discovery task can be used or not. (more details: [Github_get_all_discovery_task](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_Discovery_Tasks_Status_API_Test.ipynb)).
+> Call this API to get the status of the discovery task which identified by task ID. The reason why we calling this API at here is to confirm the discovery task can be used or not. (more details: [Github_get_all_discovery_task](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Get%20All%20Discovery%20Tasks%20API.md)).
 
 
 ```python
@@ -211,13 +211,13 @@ API Response:     'Task Status: Succeeded with warnings'
 After Step 2, we are going to discover devices by using the task we have specified in this step. 
 
 ***3a. Calling add_seed_Ips_to_discovery API***
->Call this API to add a list of target ip addresses as seeds to an EXISTING scheduled discovery task along with optional cli information for each ip. (more details: [Github_add_seed_Ips_to_discovery](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Add_Seed_IP(s)_to_Discovery_API_Test.ipynb)).
+>Call this API to add a list of target ip addresses as seeds to an EXISTING scheduled discovery task along with optional cli information for each ip. (more details: [Github_add_seed_Ips_to_discovery](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Add%20Seed%20IPs%20to%20Discovery%20Task%20API.md)).
 
 ***3b. Calling delete_seed_Ips_to_discovery API***
->Call this API to remove specific IP addresses from a discovery task, if list is empty, remove all. This calling is optional, users don't need to call this API if there is no problems in previous input devices list.(more details: [Github_delete_seed_Ips_to_discovery](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Delete_Seed_IP(s)_from_Discovery_API_Test.ipynb)).
+>Call this API to remove specific IP addresses from a discovery task, if list is empty, remove all. This calling is optional, users don't need to call this API if there is no problems in previous input devices list.(more details: [Github_delete_seed_Ips_to_discovery](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Delete%20Seed%20IPs%20to%20Discovery%20Task%20API.md)).
 
 ***3c. Calling get_all_seed_Ips_from_discovery***
->Call this API to get ip addresses of all devices in one discovery task. In current step, we totally call this API twice. First time is after we input a devices list to add seed Ips to discovery task, the reason is to confirm we put in all device Ips successfully into the task. Second time is after we calling the delete seeds Ips from discovery, also to confirm the final devices list is acurracy (if users didn't call the delete API then there is no need to call this API twice). (more details: [Github_get_all_seed_Ips_from_discovery](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_All_SeedIPs_from_Discovery_API_Test.ipynb)).
+>Call this API to get ip addresses of all devices in one discovery task. In current step, we totally call this API twice. First time is after we input a devices list to add seed Ips to discovery task, the reason is to confirm we put in all device Ips successfully into the task. Second time is after we calling the delete seeds Ips from discovery, also to confirm the final devices list is acurracy (if users didn't call the delete API then there is no need to call this API twice). (more details: [Github_get_all_seed_Ips_from_discovery](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Get%20All%20Seed%20IPs%20from%20Discovery%20Task%20API.md)).
 
 
 
@@ -369,13 +369,13 @@ In this step, we are going to run this task to modify our system conditions.
 > **Note:** users should call get_discovery_task_status API first before calling the get_discovery_tasks_result API to confirm wehther the task is finish running. 
  
 ***4a. Calling run_discovery_task_now API***<br>
->Call this API to run a scheduled discovery task right away. Error would return if the task is already running. (more details: [Github_run_discovery_task_now](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Run_Discovery_Task_Now_API_Test.ipynb)).
+>Call this API to run a scheduled discovery task right away. Error would return if the task is already running. (more details: [Github_run_discovery_task_now](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Run%20Discovery%20Task%20Now%20API.md)).
 
 ***4b. Calling get_discovery_tasks_result API***<br>
->Call this API to get the running result of specified ip addresses for a discovery task of the latest run. Note that users cannot put too many ip addresses in the query parameter, which will make the URLs over 2,000 characters and it will not work in some web browsers.(more details: [Github_get_discovery_tasks_result](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_Discovery_Tasks_Result_Test.ipynb)).
+>Call this API to get the running result of specified ip addresses for a discovery task of the latest run. Note that users cannot put too many ip addresses in the query parameter, which will make the URLs over 2,000 characters and it will not work in some web browsers.(more details: [Github_get_discovery_tasks_result](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Get%20Discovery%20Tasks%20Result%20API.md)).
 
 ***4c. Calling get_discovery_live_access API***<br>
->Call this API to get live access log of all discovered devices (successfully or failed) for a discovery task.(more details: [Github_get_discovery_live_access](https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_Discovery_Live_Access_Log_Tasks_API_Test.ipynb)).
+>Call this API to get live access log of all discovered devices (successfully or failed) for a discovery task.(more details: [Github_get_discovery_live_access](https://github.com/NetBrainAPI/North-Bound-API/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Get%20Discovery%20Task%20Live%20Access%20Log%20API.md)).
 
 
 
@@ -570,42 +570,9 @@ API Response:
 
 
     'Session logout failed! - {"statusCode":795010,"statusDescription":"Session not exist"}'
+    # i have already log out before i calling this API, so it shows failed.
 
 
-
-# Referance:
-
->1) get_all_discovery_task 
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_All_Discovery_Tasks_API_Test.ipynb
-
->2) get_all_discovery_task
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_Discovery_Tasks_Status_API_Test.ipynb
-
->3) add_seed_Ips_to_discovery
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Add_Seed_IP(s)_to_Discovery_API_Test.ipynb
-
->4) delete_seed_Ips_to_discovery
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Delete_Seed_IP(s)_from_Discovery_API_Test.ipynb
-
->5) get_all_seed_Ips_from_discovery
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_All_SeedIPs_from_Discovery_API_Test.ipynb
-
->6) run_discovery_task_now
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Run_Discovery_Task_Now_API_Test.ipynb
-
->7) get_discovery_tasks_result
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_Discovery_Tasks_Result_Test.ipynb
-
->8) get_discovery_live_access
-
->https://github.com/Gongdai/Netbrain_REST_API_First_Regularization/blob/master/Netbrain_REST_API/API_test/Discovery%20API%20Design/STANDARD_formate_Get_Discovery_Live_Access_Log_Tasks_API_Test.ipynb
 
 
 ```python

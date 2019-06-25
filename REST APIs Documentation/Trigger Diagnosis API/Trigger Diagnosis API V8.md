@@ -61,8 +61,7 @@ Call this API to trigger a map built by Netbrain from third part software.
 | map_setting.map_path_para.direction | int | path direction | 
 | map_setting.map_path_para.protocol | string | protocol id |
 | map_setting.map_path_para.protocol_name | string | protocol name |
-| map_setting.map_path_para.path_analysis_set | string | path analysis set id |
-| map_setting.map_path_para.path_analysis_set_name | string | path analysis set name | 
+| map_setting.map_path_para.isLiveUseBaseLineConfig | bool | whether to use live data or current baseline data during trigger API|
 | map_setting.map_path_para.dataSource | object | path run data source |
 | map_setting.map_path_para.dataSource.type | int | Run Type<br>1: Live<br>2: Baseline<br>3: Range<br>4: Around |
 | map_setting.map_path_para.dataSource.recent | object | null |
@@ -76,6 +75,13 @@ Call this API to trigger a map built by Netbrain from third part software.
 | map_setting.map_path_para.dataSource.around.radius | object | radius information |
 | map_setting.map_path_para.dataSource.around.radius.duration | float | Run duration |
 | map_setting.map_path_para.dataSource.around.radius.unit | int | Time Unit<br> 1:Hour; 2:Minutes; 3:Second; 4:Day. |
+|map_setting.map_path_para.advancedOption |object	|advance setting|
+|map_setting.map_path_para.advancedOption.debugMode | bool	|The debug mode of trigger API|
+|map_setting.map_path_para.advancedOption.calcWhenDeniedByACL| bool	| Whether to keep calculate when the process been denied by ACL|
+|map_setting.map_path_para.advancedOption.calcWhenDeniedByPolicy |bool	|Whether to keep calculate when the process been denied by policy|
+|map_setting.map_path_para.advancedOption.calcL3ActivePath| bool	||
+|map_setting.map_path_para.advancedOption.useCommandsWithArguments| bool	|Whether to use the commands with arguments inside.|
+|map_setting.map_path_para.advancedOption.enablePathFixup	|bool	|Whether to enable the path fixup feature.|
 | runbook_setting | object | Runbook Setting information |
 | runbook_setting.runbookPath | string | runbook path |
 | runbook_setting.runbookNodes | list | all runbook nodes |
@@ -181,21 +187,23 @@ body = {
             "duplicate_map": False
         },
         "map_path_para": {
-            "source": "",
-            "source_gateway": "",
-            "source_gateway_dev": "",
-            "source_gateway_intf": "",
-            "source_port": "",
-            "destination": "",
-            "destination_gateway": "",
-            "destination_port": 220,
-            "destination_gateway_dev": "",
-            "destination_gateway_intf": "",
-            "direction": 1,
-            "protocol": 28,
-            "protocol_name": "",
-            "path_analysis_set_name": "",
-            "path_analysis_set": "",
+            source: '',
+            source_gateway: '',
+            source_port: 80,
+            destination: '',
+            destination_gateway: '',
+            destination_port: 80,
+            direction: 1,
+            protocol: 4,
+            isLiveUseBaseLineConfig: true,
+            advancedOption: {
+                debugMode: false,
+                calcL3ActivePath: false,
+                useCommandsWithArguments: false,
+                calcWhenDeniedByACL: false,
+                calcWhenDeniedByPolicy: false,
+                enablePathFixup: true
+            }
             "dataSource": {
                 "type": 1,
                 "recent": {

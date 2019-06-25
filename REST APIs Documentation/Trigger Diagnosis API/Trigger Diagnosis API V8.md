@@ -187,23 +187,23 @@ body = {
             "duplicate_map": False
         },
         "map_path_para": {
-            source: '',
-            source_gateway: '',
-            source_port: 80,
-            destination: '',
-            destination_gateway: '',
-            destination_port: 80,
-            direction: 1,
-            protocol: 4,
-            isLiveUseBaseLineConfig: true,
-            advancedOption: {
-                debugMode: false,
-                calcL3ActivePath: false,
-                useCommandsWithArguments: false,
-                calcWhenDeniedByACL: false,
-                calcWhenDeniedByPolicy: false,
-                enablePathFixup: true
-            }
+            "source": '',
+            "source_gateway": '',
+            "source_port": 80,
+            "destination": '',
+            "destination_gateway": '',
+            "destination_port": 80,
+            "direction": 1,
+            "protocol": 4,
+            "isLiveUseBaseLineConfig": True,
+            "advancedOption": {
+                "debugMode": False,
+                "calcL3ActivePath": False,
+                "useCommandsWithArguments": False,
+                "calcWhenDeniedByACL": False,
+                "calcWhenDeniedByPolicy": False,
+                "enablePathFixup": True
+                 }
             "dataSource": {
                 "type": 1,
                 "recent": {
@@ -678,8 +678,15 @@ Input:
                         "direction": 1, # Can not be null
                         "protocol": 28, # Can not be null
                         "protocol_name": "",
-                        "path_analysis_set_name": "",
-                        "path_analysis_set": "L3 Path", # Can not be null
+                        "isLiveUseBaseLineConfig": True,
+                        "advancedOption": {
+                            "debugMode": False,
+                            "calcL3ActivePath": False,
+                            "useCommandsWithArguments": False,
+                            "calcWhenDeniedByACL": False,
+                            "calcWhenDeniedByPolicy": False,
+                            "enablePathFixup": True
+                        }
                         "dataSource": {
                             "type": 1,
                             "recent": {

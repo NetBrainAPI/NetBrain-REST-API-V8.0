@@ -76,10 +76,10 @@ Netbrain provide all available REST APIs in this repository. We offer two sectio
 2) [Delete Network Settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Network%20Setting/Delete%20Network%20Settings%20API.md)<br>
 3) [Update Network Settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Network%20Setting/Update%20Network%20Settings%20API.md)
 
-### [Path Management](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/tree/master/REST%20APIs%20Documentation/Path%20Management)
-1) [Resolve Device Gateway API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Resolve%20Device%20Gateway%20API.md)<br>
-2) [Calculate Path API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Calculate%20Path%20API.md)<br>
-3) [Get Path Calculation Result API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Get%20Path%20Calculation%20Result%20API.md)
+### [Path Management](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Path%20Calculation%20API.md)
+1) [Resolve Device Gateway API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Path%20Calculation%20API.md)<br>
+2) [Calculate Path API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Path%20Calculation%20API.md)<br>
+3) [Get Path Calculation Result API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Path%20Calculation%20API.md)
 4) [Stop A PAth API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Path%20Management/Stop%20A%20Path%20API.md)
 
 ### [User Roles Management](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/tree/master/REST%20APIs%20Documentation/User%20Roles%20Management)

@@ -129,6 +129,10 @@ Netbrain provide all available REST APIs in this repository. We offer two sectio
 2) Open Site Map of The Device
 3) Trigger An Existing Map
 4) Map A Path
+5) [Qapp Input Variables](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Trigger%20Diagnosis%20API/Trigger%20API%20input%20for%20Qapp%20input%20variables.md)
+6) [DVT Input Parameters in Runbook](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Trigger%20Diagnosis%20API/Trigger%20DVT%20input%20parameters%20in%20runbook.md)
+7) [Create Map by Qapp](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Trigger%20Diagnosis%20API/Trigger%20Qapp%20Create%20Map.md)
+8) [Application Node Verification Input Variables](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Trigger%20Diagnosis%20API/Trigger%20input%20parameter%20for%20verify%20application%20node.md)
 
 ### [User Management](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/tree/master/REST%20APIs%20Documentation/User%20Management)
 1) [Add User API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/User%20Management/Add%20User%20API.md)<br>

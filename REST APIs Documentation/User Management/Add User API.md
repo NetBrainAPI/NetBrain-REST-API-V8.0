@@ -29,7 +29,7 @@ Call this API to create a new user account in Netbrain system.
 |firstName* | string  | The first name of the user. This parameter is required.  |
 |lastName* | string  | The last name of the user. This parameter is required. |
 |password* | string  | The login password. The allowed length is 6-128 characters by default. This parameter is required.  |
-|authenticationType | integer |The authentication type for the user account.<br>▪ 1 - Local<br>▪ 2 - External|
+|authenticationType | integer |The authentication type for the user account.<br>▪ 1 - Local<br>Currently, we only support customer to add local user via API.|
 |phoneNumber | string |The phone number of the user.|
 |department | string |The department that the user belongs to.|
 |description | string |Any description about the account.|
@@ -48,7 +48,7 @@ Call this API to create a new user account in Netbrain system.
       "firstName": "NetBrain",
       "lastName": "NetBrain",
       "password": "NetBrain",
-      "authenticationType": 1 or 2,
+      "authenticationType": 1 ,
       "phoneNumber": "string",
       "department": "string",
       "description": "string",

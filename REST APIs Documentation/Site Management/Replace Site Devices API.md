@@ -27,7 +27,7 @@ Note: this API call needs to be invoked in a site transaction.
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-|sitesId^ | string  | Key of this site to be deleted. Optional. However, parameter must be siteId or sitePath, use siteId if both set.  |
+|sitesId^ | string  |  The unique id of specified site.  |
 |sitePath^ | string  | Full path name of a site. For example, 'My Network/Site1/Boston'.  |
 |devices* | list of string  | List of device hostnames.  |
 

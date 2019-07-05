@@ -30,7 +30,7 @@ Calling this API to  get all descedant sites of a container site. Return error i
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
 |sitePath^ | string  | Full path name of a site. For example, 'My Network/Site1/Boston/Dev'. |
-|siteId^ | string  | Key of this site to be deleted. Optional. However, parameter must be siteId or sitePath, use siteId if both set. |
+|siteId^ | string  |  The unique id of specified site. |
 >>**Note :** ^ required if the other parameter is null.
 
 ## Headers

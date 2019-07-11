@@ -8,7 +8,7 @@ Note that {task} means task name or task ID.
 
 ## Detail Information
 
-> **Title** : Edit Scheduled Discovery Task API<br>
+> **Title** : Delete Scheduled Discovery Task API<br>
 
 > **Version** : 06/26/2019.
 

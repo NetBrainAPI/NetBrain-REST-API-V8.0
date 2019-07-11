@@ -140,6 +140,8 @@ result = getEventConsole(getEventConsole_URL, data, headers)
 result # print out 
 ```
 
+API response:
+
     {'content': [{'eventId': '496bcc0f-6054-9e81-1eee-d8cf113b4703',
        'device': 'NY-core-bak',
        'event': 'Interface is down or SNMP failed.',

@@ -39,6 +39,7 @@ Netbrain provide all available REST APIs in this repository. We offer two sectio
 8) [Set Device Attribute API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Devices%20Management/Set%20Device%20Attribute%20API.md)<br>
 9) [Get Device Configuration API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Devices%20Management/Get%20Device%20Configration%20API.md)<br>
 10) [Get the connected switch ports of an end system API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Devices%20Management/Get%20the%20connected%20switch%20ports%20of%20an%20end%20system%20API.md)<br>
+11) [Get Device Raw Data API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Devices%20Management/Get%20Device%20Data%20API.md) <br>
 
 ### [Discovery Task Management](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/tree/master/REST%20APIs%20Documentation/Discovery%20Task%20Management) 
 1) [Add Seed IPs to Discovery Task API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Discovery%20Task%20Management/Add%20Seed%20IPs%20to%20Discovery%20Task%20API.md)<br>

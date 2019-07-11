@@ -4,7 +4,7 @@
 Netbrain provide all available REST APIs in this repository. We offer two sections in current repo. First section describe the workflow of five customer use cases with API multiple calling. Second section elaborate the detail information for each API. We provide resonable explanations and clear sample code in both sections. We hope users can understand the different features of different APIs and construct a concept to solve some use cases by multi-calling Netbrain REST APIs.  
 
 ## Section 1) Golden Use Case Templates
-1) [Get Path By Calling APIs](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/Golden%20Use%20Case%20Templates/Get%20Path%20By%20Calling%20APIs%20upgrate.md)<br>
+1) [Get Path By Calling APIs](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/Golden%20Use%20Case%20Templates/Get%20Path%20By%20Calling%20APIs%20V8.0.md)<br>
 2) [Sites Management by Calling APIs](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/Golden%20Use%20Case%20Templates/Sites%20Management%20by%20Calling%20APIs.md)<br>
 3) [Calling Trigger Diagnosis API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/Golden%20Use%20Case%20Templates/Calling%20Trigger%20Diagnosis%20API.md)<br>
 4) [Discovery and Devices Management by Calling APIs](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/Golden%20Use%20Case%20Templates/Discovery%20and%20Devices%20Management%20by%20Calling%20APIs.md)<br>

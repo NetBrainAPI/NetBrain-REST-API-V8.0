@@ -62,12 +62,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import pprint
 
 # Global Variables
-nb_url = "http://192.168.28.173"
+nb_url = "http://customer NetBrain environment."
 headers = {'Content-Type': 'application/json', 'Accept': 'application/json'} 
-TenantName = "Initial Tenant"
-DomainName = "GL_SNOW_TEST"
-username = "gongdai.liu"
-password = "Netbrain1"
+TenantName = "tenant name"
+DomainName = "domain name"
+username = "user name"
+password = "password"
 source_device = "172.24.30.1"
 destination_device = "172.24.101.2"
 ```

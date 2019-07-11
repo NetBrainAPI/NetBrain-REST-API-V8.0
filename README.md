@@ -145,3 +145,8 @@ Netbrain provide all available REST APIs in this repository. We offer two sectio
 4) [Get Detail Usage Report of Users API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/User%20Management/Get%20Detail%20Usage%20Report%20of%20Users%20API.md)<br>
 5) [Update User API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/User%20Management/Update%20User%20API.md)<br>
 6) [Get Users API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/User%20Management/Get%20Users%20API.md)
+
+### [Event Console Management](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/tree/master/REST%20APIs%20Documentation/Event%20Console%20Management)
+1) [Get Event Console API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Event%20Console%20Management/Get%20Event%20console.md)<br>
+2) [Acknowledge/close Event Alert API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Event%20Console%20Management/Acknowledge_close%20Event%20Alert%20API.md)<br>
+3) [Delete Event Alert API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Event%20Console%20Management/Delete%20Event%20Alert%20API.md)<br>

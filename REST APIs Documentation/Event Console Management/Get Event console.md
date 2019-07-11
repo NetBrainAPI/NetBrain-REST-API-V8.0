@@ -140,13 +140,6 @@ result = getEventConsole(getEventConsole_URL, data, headers)
 result # print out 
 ```
 
-    D:\Anaconda\lib\site-packages\urllib3\connectionpool.py:847: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-      InsecureRequestWarning)
-    
-
-
-
-
     {'content': [{'eventId': '496bcc0f-6054-9e81-1eee-d8cf113b4703',
        'device': 'NY-core-bak',
        'event': 'Interface is down or SNMP failed.',

@@ -32,6 +32,7 @@ Call this API to trigger a map built by Netbrain from third part software.
 |basic_setting.stub_name* | string  | Stub Name  |
 |basic_setting.stub_setting | object  | Stub Setting Information  |
 |basic_setting.stub_setting.mode | int  | Triggered Type.<br> 0: Real-Time,<br> 1: On-Demand  |
+|basic_setting.stub_setting.max_waiting_hours | int  | If wait time exceeds the int hours, then change task to On-demand mode.   |
 |map_setting | object  | Map Setting Information  |
 |map_setting.map_create_mode | int  | Create Map Mode.<br>0: Map Device and Its Neighbors.<br>1: Open Site Map of the Device.<br>2: Open Existing Map.<br>3: Map a Path.<br>4: Create an Empty Map.  |
 |map_setting.map_open_para | object  | parameters of opening exist map  |

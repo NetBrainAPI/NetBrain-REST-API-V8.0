@@ -150,3 +150,7 @@ Netbrain provide all available REST APIs in this repository. We offer two sectio
 1) [Get Event Console API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Event%20Console%20Management/Get%20Event%20console.md)<br>
 2) [Acknowledge/close Event Alert API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Event%20Console%20Management/Acknowledge_close%20Event%20Alert%20API.md)<br>
 3) [Delete Event Alert API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Event%20Console%20Management/Delete%20Event%20Alert%20API.md)<br>
+
+### [Change Ticket Management](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/tree/master/REST%20APIs%20Documentation/Change%20Management)
+1) [Binding 3rd Party Ticket with Runbook API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Change%20Management/_Change%20Management%20Approval%20Process%20API%20Design%20--%20Binding%20Runbook.md)<br>
+2) [Approve Change Management Request API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/Change%20Management/_Change%20Management%20Approval%20Process%20API%20Design%20--%20Change%20state.md)<br>

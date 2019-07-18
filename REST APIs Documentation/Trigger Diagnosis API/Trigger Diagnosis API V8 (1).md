@@ -92,48 +92,48 @@ Call this API to trigger a map built by Netbrain from third part software.
 | runbook_setting.runbookNodes[].useDeviceOnMap | bool | use devices of map or not |
 | runbook_setting.runbookNodes[].maxExecutingMins | int | max run minutes of the node |
 | runbook_setting.runbookNodes[].runbookNodeSetting | object | setting information of node type |
-| runbook_setting.CLI_settings | list | CLI Command Node settings information by order |
-| runbook_setting.CLI_settings[].devices | list | cli command device for the node |
-| runbook_setting.CLI_settings[].devices[].deviceId | string | device Id |
-| runbook_setting.CLI_settings[].devices[].deviceName | string | device Name |
-| runbook_setting.CLI_settings[].retrieveData | object | retrieve setting for cli command of the node |
-| runbook_setting.CLI_settings[].retrieveData.showCommand | list | show command list |
-| runbook_setting.retrieve_settings | list | Retrieve Node settings information by order |
-| runbook_setting.retrieve_settings[].devices | list | retrieve device for the node |
-| runbook_setting.retrieve_settings[].devices[].deviceId | string | device Id |
-| runbook_setting.retrieve_settings[].devices[].deviceName | string | device Name |
-| runbook_setting.retrieve_settings[].retrieveData | object | retrieve setting for retrieve of the node |
-| runbook_setting.retrieve_settings[].retrieveData.deviceInfo | bool | retrieve device basic info flag |
-| runbook_setting.retrieve_settings[].retrieveData.interfaceInfo | bool | retrieve device interface info flag |
-| runbook_setting.retrieve_settings[].retrieveData.config | bool | retrieve config flag |
-| runbook_setting.retrieve_settings[].retrieveData.macTable | bool | retrieve mac table flag |
-| runbook_setting.retrieve_settings[].retrieveData.arpTable | bool | retrieve arp table flag |
-| runbook_setting.retrieve_settings[].retrieveData.nctTable | bool | retrieve nct table flag |
-| runbook_setting.retrieve_settings[].retrieveData.bgpNbr | bool | retrieve bgp table flag |
-| runbook_setting.retrieve_settings[].retrieveData.routeTable | bool | retrieve route table flag |
-| runbook_setting.retrieve_settings[].retrieveData.stpTable | bool | retrieve stp table flag |
-| runbook_setting.retrieve_settings[].retrieveData.cdpTable | bool | retrieve cdp table flag |
-| runbook_setting.retrieve_settings[].retrieveData.showCommand | list | show command list |
-| runbook_setting.ping_settings | list | Ping Node settings information by order |
-| runbook_setting.ping_settings[].source_type | int | Source Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
-| runbook_setting.ping_settings[].source | string | source device name |
-| runbook_setting.ping_settings[].source_interface | string | source interface name |
-| runbook_setting.ping_settings[].destination_type | int | destination Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
-| runbook_setting.ping_settings[].destination | string | destination device name |
-| runbook_setting.ping_settings[].destination_interface | string | destination interface name |
-| runbook_setting.ping_settings[].timeout_seconds | int | time out seconds |
-| runbook_setting.ping_settings[].packet_bytes | int | package size |
-| runbook_setting.ping_settings[].packet_count | int | package count |
-| runbook_setting.ping_settings[].fragment | bool | fragment flag in package |
-| runbook_setting.tracert_settings | list | Traceroute Node settings information by order |
-| runbook_setting.tracert_settings[].source_type | int | Source Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
-| runbook_setting.tracert_settings[].source | string | source device name |
-| runbook_setting.tracert_settings[].source_interface | string | sourece interface name |
-| runbook_setting.tracert_settings[].destination_type | int | destination Device Type<br>1: NetworkServer<br>2: Device<br>4: IP|
-| runbook_setting.tracert_settings[].destination | string | destination device name |
-| runbook_setting.tracert_settings[].destination_interface | string | destination interface name |
-| runbook_setting.tracert_settings[].timeout_seconds | int | time out seconds |
-| runbook_setting.tracert_settings[].max_hops | int | max hops |
+| CLI_settings | list | CLI Command Node settings information by order |
+| CLI_settings[].devices | list | cli command device for the node |
+| CLI_settings[].devices[].deviceId | string | device Id |
+| CLI_settings[].devices[].deviceName | string | device Name |
+| CLI_settings[].retrieveData | object | retrieve setting for cli command of the node |
+| CLI_settings[].retrieveData.showCommand | list | show command list |
+| retrieve_settings | list | Retrieve Node settings information by order |
+| retrieve_settings[].devices | list | retrieve device for the node |
+| retrieve_settings[].devices[].deviceId | string | device Id |
+| retrieve_settings[].devices[].deviceName | string | device Name |
+| retrieve_settings[].retrieveData | object | retrieve setting for retrieve of the node |
+| retrieve_settings[].retrieveData.deviceInfo | bool | retrieve device basic info flag |
+| retrieve_settings[].retrieveData.interfaceInfo | bool | retrieve device interface info flag |
+| retrieve_settings[].retrieveData.config | bool | retrieve config flag |
+| retrieve_settings[].retrieveData.macTable | bool | retrieve mac table flag |
+| retrieve_settings[].retrieveData.arpTable | bool | retrieve arp table flag |
+| retrieve_settings[].retrieveData.nctTable | bool | retrieve nct table flag |
+| retrieve_settings[].retrieveData.bgpNbr | bool | retrieve bgp table flag |
+| retrieve_settings[].retrieveData.routeTable | bool | retrieve route table flag |
+| retrieve_settings[].retrieveData.stpTable | bool | retrieve stp table flag |
+| retrieve_settings[].retrieveData.cdpTable | bool | retrieve cdp table flag |
+| retrieve_settings[].retrieveData.showCommand | list | show command list |
+| ping_settings | list | Ping Node settings information by order |
+| ping_settings[].source_type | int | Source Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
+| ping_settings[].source | string | source device name |
+| ping_settings[].source_interface | string | source interface name |
+| ping_settings[].destination_type | int | destination Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
+| ping_settings[].destination | string | destination device name |
+| ping_settings[].destination_interface | string | destination interface name |
+| ping_settings[].timeout_seconds | int | time out seconds |
+| ping_settings[].packet_bytes | int | package size |
+| ping_settings[].packet_count | int | package count |
+| ping_settings[].fragment | bool | fragment flag in package |
+| tracert_settings | list | Traceroute Node settings information by order |
+| tracert_settings[].source_type | int | Source Device Type<br>1: NetworkServer<br>2: Device<br>4: IP |
+| tracert_settings[].source | string | source device name |
+| tracert_settings[].source_interface | string | sourece interface name |
+| tracert_settings[].destination_type | int | destination Device Type<br>1: NetworkServer<br>2: Device<br>4: IP|
+| tracert_settings[].destination | string | destination device name |
+| tracert_settings[].destination_interface | string | destination interface name |
+| tracert_settings[].timeout_seconds | int | time out seconds |
+| tracert_settings[].max_hops | int | max hops |
 
 > ***Example:***
 

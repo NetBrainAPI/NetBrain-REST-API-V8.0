@@ -1,7 +1,7 @@
 
 
 # Netbrain REST API Documentation
-Netbrain provide all available REST APIs in this repository. We offer two sections in current repo. First section describe the workflow of five customer use cases with API multiple calling. Second section elaborate the detail information for each API. We provide resonable explanations and clear sample code in both sections. We hope users can understand the different features of different APIs and construct a concept to solve some use cases by multi-calling Netbrain REST APIs.  
+Netbrain provide all available REST APIs in this repository. We offer two sections in current repo. First section describe the workflow of six customer golden use cases with API multiple calling. Second section elaborate the detail information for each API. We provide resonable explanations and clear sample code in both sections. We hope users can understand the different features of different APIs and construct a concept to solve some use cases by multi-calling Netbrain REST APIs.  
 
 ## Section 1) Golden Use Case Templates
 1) [Get Path Detail Information by Calling APIs](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/Golden%20Use%20Case%20Templates/Get%20Path%20By%20Calling%20APIs%20V8.0.md)<br>

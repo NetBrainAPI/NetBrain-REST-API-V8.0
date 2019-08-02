@@ -27,7 +27,7 @@ Call this API to update the information and privileges of the specified role by 
 |roleName* | string  | The current name of the role. Identification key to search the existing role.  |
 |newRoleName | string  | A new name of the role. This field is optional. No change will be made if newRoleName, description, privileges fields are all null or empty.  |
 |description | string  | The description of the role. This field is optional.  |
-|privileges | list of integer  | The privileges that the role owns. See roles and privileges for more details. This field is optional. |
+|privileges | list of integer  | The privileges that the role owns. See roles and privileges for more details. Detail information please check Roles and Privileges Table in [Add Role API](https://github.com/NetBrainAPI/NetBrain-REST-API-V8.0/blob/master/REST%20APIs%20Documentation/User%20Roles%20Management/Add%20Role%20API.md) |
 
 > ***Example***
 

@@ -25,7 +25,7 @@ OpenAPI version 1.0.0
 |<img width=100/>|<img width=100/>|<img width=500/>|
 |username* | string  | the username to log into your NetBrain domain.  |
 |password* | string  | the password to log into your NetBrain domain.  |
-|authentication_id | string  | This body parameter is only required for an external user through SSO, LDAP/AD or TACACS and the value must same with the name of external authentication which the user created by admin role during system management under "User Account" section. |
+|authentication_id | string  | This body parameter is only required for an external user through LDAP/AD or TACACS and the value must same with the name of external authentication which the user created by admin role during system management under "User Account" section. |
 
 > ***Example*** : 
 

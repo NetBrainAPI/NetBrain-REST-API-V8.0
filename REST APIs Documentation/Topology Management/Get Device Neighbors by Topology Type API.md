@@ -1,10 +1,8 @@
 
 # Topology API Design
 
-## ***POST*** /V1/CMDB/Topology/Devices/Neighbors{?hostname}&{?topoType}
-Call this API to build or rebuild the Layer 2 topology for all network devices in a domain. 
-
-Note that, in a domain scope, only one topology build task can run at any time.
+## ***GET*** /V1/CMDB/Topology/Devices/Neighbors{?hostname}&{?topoType}
+Use this API to get specific neighbors of a device according to the specified topology type.
 
 ## Detail Information
 

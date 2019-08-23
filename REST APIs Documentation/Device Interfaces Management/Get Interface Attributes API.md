@@ -1,7 +1,7 @@
 
 # Interface API Design
 
-## ***GET*** /V1/CMDB/Interfaces/Attributes/{?hostname}/{?interfaceName}/{?attributeName}
+## ***GET*** /V1/CMDB/Interfaces/Attributes/{?hostname}&{?interfaceName}&{?attributeName}&{?interfaceType}
 Call this API to get the value for a specified attribute of a device interface, get all attributes if the attribute name is not specifed.
 
 ## Detail Information
@@ -10,7 +10,7 @@ Call this API to get the value for a specified attribute of a device interface, 
 
 > **Version** : 01/29/2019.
 
-> **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Interfaces/Attributes/{?hostname}/{?interfaceName}/{?attributeName}
+> **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Interfaces/Attributes
 
 > **Authentication** : 
 
@@ -30,7 +30,10 @@ Call this API to get the value for a specified attribute of a device interface, 
 |<img width=100/>|<img width=100/>|<img width=500/>|
 |hostname*| string | Device hostname.  |
 |interfaceName* | string  | Input the full name of the interface. |
+|interfaceType | string | The corrsponding name of interface type.<br> intfs : Physical Interface. <br> ipIntfs : IPv4 Interface. <br> ip6Intfs : IPv6 Interface. <br> ipsecVpnIntfs : IPsec VPN Interface. <br> greVpnIntfs : GRE VPN Interface. |
 |attributeName | string  | Optional. The name of the attribute that you want to get its value,, get all attributes if the attribute name is not specifed.<br>Please note that the attribute name here is case sensitive and not the name displayed in the Device Details pane of NetBrain IE system. See Applicable Interface Attributes for system built-in interface attributes.  |
+
+***Note:*** the interface type is an optional input attribute, if customer leave it as empty then this API will only return the attribute of physical interface.
 
 ## Headers
 

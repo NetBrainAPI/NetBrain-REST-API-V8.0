@@ -1,7 +1,8 @@
----
-subtitle: "Single Pane of Glass – ServiceNow Active Incident & Change"
-title: NetBrain Integration Deployment Guide
----
+NetBrain Integration Deployment Guide
+=====================================
+
+Single Pane of Glass – ServiceNow Active Incidents & Changes
+------------------------------------------------------------
 
 Use Case
 ========
@@ -104,20 +105,20 @@ Create External API Server
 
     -   Successful
 
-        ![](media/0994bb1f580ba4618e542b5ab6fc0473.png)
+    ![](media/0994bb1f580ba4618e542b5ab6fc0473.png)
 
     -   Invalid credentials
 
-        ![](media/75b0146636c4b3506278ecf0c0142e62.png)
+    ![](media/75b0146636c4b3506278ecf0c0142e62.png)
 
     -   Unreachable endpoint
 
-        ![](media/ad1be56f73976972f787ffcc0810c8fb.png)
+    ![](media/ad1be56f73976972f787ffcc0810c8fb.png)
 
 6.  With a successful test, click OK button to save.
 
- Import Data View Template
---------------------------
+Import Data View Template
+-------------------------
 
 1.  Download [ServiceNow] Active Incidents & Changes.xdvt file.
 

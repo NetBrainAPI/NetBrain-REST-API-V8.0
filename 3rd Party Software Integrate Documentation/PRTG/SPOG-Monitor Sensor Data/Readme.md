@@ -1,7 +1,8 @@
----
-subtitle: Single Pane of Glass – PRTG Monitor Sensor Data
-title: NetBrain Integration Deployment Guide
----
+NetBrain Integration Deployment Guide
+=====================================
+
+Single Pane of Glass – PRTG Monitor Sensor Data
+------------------------------------------------------------
 
 Use Case
 ========
@@ -125,10 +126,10 @@ repeat this section for each of the Front Servers.
     successful connectivity test followed by two typical failure scenarios:
     Incorrect credentials and connectivity between NetBrain and PRTG.
 
-| **Successful Connection**                                                                                                                                                                            | [](successful.png) | 
+| **Successful Connection**                                                                                                                                                                            |![](media/successful.png)| 
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| **Error Scenario:** Invalid username/password. **Possible Resolution:** Confirm credentials specified in the PRTG API Adaptor configuration and try it agin.                                         | [](usernamepasswordwrong.png) |
-| **Error Scenario:** PRTG endpoint is unreachable. **Possible Resolution:** Confirm that the NetBrain Front Server(s) can reach the PRTG platform using 3rd party tools (Ping, Traceroute, Wireshark) | [](endpointwrong.png) |
+| **Error Scenario:** Invalid username/password. **Possible Resolution:** Confirm credentials specified in the PRTG API Adaptor configuration and try it agin.                                         |![](media/usernamepasswordwrong.png) |
+| **Error Scenario:** PRTG endpoint is unreachable. **Possible Resolution:** Confirm that the NetBrain Front Server(s) can reach the PRTG platform using 3rd party tools (Ping, Traceroute, Wireshark) |![](media/endpointwrong.png) |
 
 2.  Once successful connection with the local PRTG instance has been confirmed,
     click “**OK**” to finalize PRTG server connection.

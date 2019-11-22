@@ -17,9 +17,9 @@ provides Hyperlink on each Sensor ID to open the corresponding PRTG sensor page.
 With this integration, NetBrain can overlay the following information of each
 sensor:
 
-| Sensor Name | Sensor ID        | Status | Last Value |
-|-------------|------------------|--------|------------|
-| Ping        | [3494](YourPRTG) | Up     | 2 msec     |
+| Sensor Name | Sensor ID                                                                                                                   | Status | Last Value |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------|--------|------------|
+| Ping        | [3494](file:///E:\Dropbox%20(NT)\Advanced%20Services\Customization%20Folder\Integration\Documentation\8.01%20PRTG\YourPRTG) | Up     | 2 msec     |
 
 NetBrain Map with PRTG Data Overlay
 -----------------------------------
@@ -125,10 +125,10 @@ repeat this section for each of the Front Servers.
     successful connectivity test followed by two typical failure scenarios:
     Incorrect credentials and connectivity between NetBrain and PRTG.
 
-| **Successful Connection**                                                                                                                                                                            | [./media/image2.png](./media/image2.png) |
+| **Successful Connection**                                                                                                                                                                            | ![](successful.png) | 
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| **Error Scenario:** Invalid username/password. **Possible Resolution:** Confirm credentials specified in the PRTG API Adaptor configuration and try it agin.                                         | [./media/image3.png](./media/image3.png) |
-| **Error Scenario:** PRTG endpoint is unreachable. **Possible Resolution:** Confirm that the NetBrain Front Server(s) can reach the PRTG platform using 3rd party tools (Ping, Traceroute, Wireshark) | [./media/image4.png](./media/image4.png) |
+| **Error Scenario:** Invalid username/password. **Possible Resolution:** Confirm credentials specified in the PRTG API Adaptor configuration and try it agin.                                         | ![](usernamepasswordwrong.png) |
+| **Error Scenario:** PRTG endpoint is unreachable. **Possible Resolution:** Confirm that the NetBrain Front Server(s) can reach the PRTG platform using 3rd party tools (Ping, Traceroute, Wireshark) | ![](endpointwrong.png) |
 
 2.  Once successful connection with the local PRTG instance has been confirmed,
     click “**OK**” to finalize PRTG server connection.

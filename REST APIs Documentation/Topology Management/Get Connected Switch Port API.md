@@ -2,7 +2,7 @@
 # Topology API Design
 
 ## ***GET*** /V1/CMDB/Topology/Devices/{ip}/ConnectedSwitchPort
-Call this API to get the connected layer 2 switch port whihc specified by management.
+Call this API to get the connected layer 2 switch port which specified by management.
 
 ## Detail Information
 
